@@ -2,11 +2,14 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
+var saveBtnEl = $('.saveBtn');
+var currentDayEl = $('#currentDay');
+var hoursParentEl = $('#hoursParent')
+var now = dayjs().format("MMM DD YYYY h:mm a");
+
+
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
-  var saveBtnEl = $('.saveBtn');
-  console.log(saveBtnEl);
-  
   
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -14,12 +17,19 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   //
+
+  //when user presses save do something like this. 
+  localStorage.setItem("hour",'this.something');
+  //Reload the page
+
   // TODO: Add code to apply the past, present, or future class to each time
   // block by comparing the id to the current hour. HINTS: How can the id
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
   //
+
+  hoursParentEl.children().addClass()
 
 
 
@@ -33,12 +43,10 @@ $(function () {
 });
 
 
-
 function updateTime() {
-  var currentDayEl = $('#currentDay');
-  var now = dayjs().format("MMM DD YYYY h:mm a");
   currentDayEl.text(now);
 }
+
 updateTime();
 setInterval(updateTime, 6000);
 
