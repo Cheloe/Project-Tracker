@@ -32,5 +32,5 @@ var hours = dayjs().format('HH');
   }
   
   updateTime();
-  setInterval(updateTime, 000);
+  setInterval(updateTime, 1000);
 
