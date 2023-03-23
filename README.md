@@ -10,3 +10,15 @@
 <li> Added logic to write from local storage any saved text to corresponding text area
 <li> Wrote this readme
 <li> Deployed Site
+
+<br>
+
+## Screenshots:
+
+<br>
+<img src=assets/screenshots/no-saved-entries.png>
+<img src=assets/screenshots/with-saved-entries.png>
+
+<br>
+
+## Check out the <a href="https://cheloe.github.io/Project-Tracker/"> deployed site </a>
