@@ -22,7 +22,7 @@ var hours = dayjs().format('HH');
         }
         //render saved text        
         if (localStorage.getItem(timeBlockEls[i].getAttribute('id')) != null) {
-            timeBlockEls[i].children[1].value = timeBlockEls[i].getAttribute('id');
+            timeBlockEls[i].children[1].value = localStorage.getItem(timeBlockEls[i].getAttribute('id'));
         }
     }
   });
