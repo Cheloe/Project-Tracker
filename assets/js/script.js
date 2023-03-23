@@ -21,8 +21,8 @@ var hours = dayjs().format('HH');
             timeBlockEls[i].className ="row time-block future";
         }
         //render saved text        
-        if (var storedKey = localStorage.getItem(timeBlockEls[i].getAttribute('id')) != null) {
-            timeBlockEls[i].children[1].value = storedKey;
+        if (localStorage.getItem(timeBlockEls[i].getAttribute('id')) != null) {
+            timeBlockEls[i].children[1].value = timeBlockEls[i].getAttribute('id');
         }
     }
   });
