@@ -4,7 +4,6 @@ var timeBlockEls = $('.time-block')
 var now = dayjs().format("MMM DD YYYY h:mm a");
 var hours = dayjs().format('HH');
 
-
   $(function () {
     //for every time block added to the html do the following: 
     for (let i = 0; i < timeBlockEls.length; i++) {
@@ -16,10 +15,8 @@ var hours = dayjs().format('HH');
         var timeCompare = 'hour-' + hours;
         if (timeBlockEls[i].getAttribute('id') === timeCompare){
             timeBlockEls[i].className ="row time-block present";
-            console.log(timeBlockEls[i].getAttribute('id'))
             } else if (timeBlockEls[i].getAttribute('id') < timeCompare){
                     timeBlockEls[i].className ="row time-block past";
-                    console.log(timeBlockEls[i].getAttribute('id'))
                 } else {
                     timeBlockEls[i].className ="row time-block future";
                 }
@@ -36,5 +33,5 @@ var hours = dayjs().format('HH');
   }
   
   updateTime();
-  setInterval(updateTime, 6000);
+  setInterval(updateTime, 000);
 
