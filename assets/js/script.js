@@ -15,15 +15,14 @@ var hours = dayjs().format('HH');
         var timeCompare = 'hour-' + hours;
         if (timeBlockEls[i].getAttribute('id') === timeCompare){
             timeBlockEls[i].className ="row time-block present";
-            } else if (timeBlockEls[i].getAttribute('id') < timeCompare){
-                    timeBlockEls[i].className ="row time-block past";
-                } else {
-                    timeBlockEls[i].className ="row time-block future";
-                }
+        } else if (timeBlockEls[i].getAttribute('id') < timeCompare){
+            timeBlockEls[i].className ="row time-block past";
+        } else {
+            timeBlockEls[i].className ="row time-block future";
+        }
         //render saved text        
-        if (localStorage.getItem(timeBlockEls[i].getAttribute('id')) != null) {
-            console.log(localStorage.getItem(timeBlockEls[i].getAttribute('id')))
-            timeBlockEls[i].children[1].value = localStorage.getItem(timeBlockEls[i].getAttribute('id'))
+        if (var storedKey = localStorage.getItem(timeBlockEls[i].getAttribute('id')) != null) {
+            timeBlockEls[i].children[1].value = storedKey;
         }
     }
   });
